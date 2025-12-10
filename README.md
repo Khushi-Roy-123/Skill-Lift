@@ -1,4 +1,3 @@
-
 # SkillLift - Empowering Women in STEM
 
 SkillLift is a comprehensive, AI-powered web application designed to empower, support, and inspire women in STEM (Science, Technology, Engineering, and Mathematics) fields. 
@@ -37,6 +36,7 @@ Beyond just career growth, SkillLift recognizes the importance of holistic succe
 - **State Management**: React Hooks & Context
 - **Data Persistence**: LocalStorage (Client-side)
 - **Icons**: Custom SVG Component System
+- **Build Tool**: Vite
 
 ## ⚙️ Configuration
 
@@ -51,12 +51,12 @@ API_KEY=your_actual_api_key_here
 
 ## 🚀 Getting Started
 
-Follow these instructions to run the project locally.
+Follow these instructions to run the project locally using `npm`.
 
 ### Prerequisites
 
+- [Node.js](https://nodejs.org/) (Required)
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Node.js](https://nodejs.org/) (Recommended) or [Python](https://www.python.org/)
 
 ### Running the App
 
@@ -66,27 +66,31 @@ Follow these instructions to run the project locally.
 2.  **Open Terminal:**
     Go to **Terminal > New Terminal** in the top menu bar.
 
-3.  **Start the Server:**
-    Type the following command in the terminal and press Enter:
-
+3.  **Install Dependencies:**
+    Type the following command to install the required packages:
     ```bash
-    npx serve .
+    npm install
     ```
 
-    *Alternatively, if you use Python:*
+4.  **Start the Development Server:**
+    Run the following command to start the app:
     ```bash
-    python -m http.server 8000
+    npm run dev
     ```
 
-4.  **Open in Browser:**
-    Click the URL shown in the terminal (usually `http://localhost:3000` or `http://localhost:8000`) to view the app.
+5.  **Open in Browser:**
+    Hold `Ctrl` (or `Cmd` on Mac) and click the URL shown in the terminal (usually `http://localhost:5173`) to view the app.
 
 ## 📂 Project Structure
 
 ```
 /
 ├── .env                # Environment variables
+├── package.json        # Dependencies and scripts
+├── vite.config.ts      # Build configuration
+├── tsconfig.json       # TypeScript configuration
 ├── public/             # Static assets (icons, manifest)
+├── index.html          # Entry point
 ├── src/
 │   ├── components/     # Reusable UI components
 │   │   ├── icons/      # SVG Icon system
@@ -101,7 +105,6 @@ Follow these instructions to run the project locally.
 │   ├── utils/          # Helpers (Auth, Dates, Gamification)
 │   ├── App.tsx         # Routing and Global State
 │   └── types.ts        # TypeScript definitions
-└── index.html          # Entry point
 ```
 
 ---
