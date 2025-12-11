@@ -1,7 +1,7 @@
 
 {
   "short_name": "SkillLift",
-  "name": "SkillLift - Empowering Women in STEM",
+  "name": "SkillLift - Empowering Professionals in STEM",
   "icons": [
     {
       "src": "/logo192.svg",
@@ -18,5 +18,5 @@
   "display": "standalone",
   "theme_color": "#3B82F6",
   "background_color": "#F0F9FF",
-  "description": "An application designed to empower and support women in STEM fields by providing mentorship, resources, and a community space."
+  "description": "An application designed to empower and support aspiring professionals in STEM fields by providing mentorship, resources, and a community space."
 }

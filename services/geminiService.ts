@@ -1,3 +1,4 @@
+
 import { GoogleGenAI, GenerateContentResponse, Type } from "@google/genai";
 import { ChatMessage, Opportunity, ResumeAnalysisResult, WellbeingEntry, Mood, InspirationalPerson } from "../types";
 import { getOpportunities } from "./dataService";
@@ -11,7 +12,7 @@ if (!API_KEY) {
 
 const ai = new GoogleGenAI({ apiKey: API_KEY });
 
-const baseSystemInstruction = `You are SkillLift, a supportive and empowering AI mentor for women and aspiring women in STEM (Science, Technology, Engineering, and Mathematics). Your purpose is to provide encouragement, answer questions about STEM fields, offer career advice, and share inspiring stories about the achievements of women in these fields. Your tone should always be encouraging, knowledgeable, friendly, and professional. When asked complex topics, break them down into easy-to-understand concepts. You are a guide and a source of inspiration. Format your responses using Markdown to improve readability, including lists, bold text, and italics where appropriate.`;
+const baseSystemInstruction = `You are SkillLift, a supportive and empowering AI mentor for aspiring professionals in STEM (Science, Technology, Engineering, and Mathematics). Your purpose is to provide encouragement, answer questions about STEM fields, offer career advice, and share inspiring stories about the achievements of pioneers in these fields. Your tone should always be encouraging, knowledgeable, friendly, and professional. When asked complex topics, break them down into easy-to-understand concepts. You are a guide and a source of inspiration. Format your responses using Markdown to improve readability, including lists, bold text, and italics where appropriate.`;
 
 // RAG: Simple keyword-based search
 const searchOpportunities = (query: string, opportunities: Opportunity[]): Opportunity[] => {
@@ -103,7 +104,7 @@ const resumeAnalysisSchema = {
 };
 
 export const analyzeResume = async (resumeText: string): Promise<ResumeAnalysisResult | null> => {
-    const systemInstruction = `You are an expert STEM career coach and resume reviewer. Your goal is to provide concise, actionable, and encouraging feedback to help women in STEM improve their resumes. Analyze the provided resume text based on best practices for technical roles and Applicant Tracking Systems (ATS). You must provide your response in the requested JSON format.`;
+    const systemInstruction = `You are an expert STEM career coach and resume reviewer. Your goal is to provide concise, actionable, and encouraging feedback to help professionals in STEM improve their resumes. Analyze the provided resume text based on best practices for technical roles and Applicant Tracking Systems (ATS). You must provide your response in the requested JSON format.`;
     
     const userPrompt = `Please analyze the following resume text and provide feedback. Focus on clarity, impact, use of technical keywords, and formatting for ATS compatibility.
     
@@ -135,13 +136,13 @@ export const analyzeResume = async (resumeText: string): Promise<ResumeAnalysisR
 };
 
 export const getWellbeingSuggestion = async (latestMood: Mood, history: WellbeingEntry[]): Promise<string> => {
-    const systemInstruction = `You are a caring and supportive mental wellbeing coach named 'Aura' within the SkillLift app, an application for women in STEM. Your tone is gentle, empathetic, and encouraging. Your goal is to provide short, simple, and actionable mental wellness tips.`;
+    const systemInstruction = `You are a caring and supportive mental wellbeing coach named 'Aura' within the SkillLift app, an application for professionals in STEM. Your tone is gentle, empathetic, and encouraging. Your goal is to provide short, simple, and actionable mental wellness tips.`;
 
     const historyString = history.slice(-5).map(e => `${e.mood} on ${new Date(e.date).toLocaleDateString()}`).join(', ');
 
-    const userPrompt = `A user in a STEM field just checked in with the following mood: "${latestMood}". Her recent check-in history includes: ${historyString}. 
+    const userPrompt = `A user in a STEM field just checked in with the following mood: "${latestMood}". Their recent check-in history includes: ${historyString}. 
     
-    Based on this, provide a concise (2-3 sentences max) and positive suggestion. This could be a simple mindfulness exercise (like a 1-minute breathing technique), a suggestion to take a short, specific type of break (e.g., 'stretch for 5 minutes'), or a positive affirmation related to her journey in STEM. 
+    Based on this, provide a concise (2-3 sentences max) and positive suggestion. This could be a simple mindfulness exercise (like a 1-minute breathing technique), a suggestion to take a short, specific type of break (e.g., 'stretch for 5 minutes'), or a positive affirmation related to their journey in STEM. 
     
     Do not sound robotic. Start with a warm, empathetic phrase. Tailor the suggestion to the mood. For 'great', celebrate it. For 'stressed' or 'overwhelmed', provide a calming technique. For 'okay', provide a gentle encouragement.`;
 
@@ -162,7 +163,7 @@ export const getWellbeingSuggestion = async (latestMood: Mood, history: Wellbein
 };
 
 export const chatWithAura = async (history: ChatMessage[]): Promise<string> => {
-    const systemInstruction = `You are Aura, a compassionate and non-judgmental AI companion within the SkillLift app. Your purpose is to be a supportive listener for women in STEM who need a safe space to express their feelings. Your tone is always calm, empathetic, and encouraging.
+    const systemInstruction = `You are Aura, a compassionate and non-judgmental AI companion within the SkillLift app. Your purpose is to be a supportive listener for professionals in STEM who need a safe space to express their feelings. Your tone is always calm, empathetic, and encouraging.
 
 IMPORTANT: You are NOT a therapist or a medical professional. You must NEVER provide medical advice, diagnoses, or treatment plans. If a user expresses severe distress, self-harm, or mentions a crisis, you MUST gently guide them to seek help from a qualified professional or a crisis hotline and provide a resource like the National Suicide Prevention Lifeline number: 988.
 
@@ -195,7 +196,7 @@ Your primary role is to:
 };
 
 export const getMealSuggestion = async (ingredients: string, time: string): Promise<string> => {
-    const systemInstruction = `You are a practical and helpful culinary assistant for busy women in STEM. Your goal is to suggest quick, healthy, and delicious meal ideas based on provided ingredients. Keep instructions clear, concise, and easy to follow. Format your response in Markdown.`;
+    const systemInstruction = `You are a practical and helpful culinary assistant for busy professionals in STEM. Your goal is to suggest quick, healthy, and delicious meal ideas based on provided ingredients. Keep instructions clear, concise, and easy to follow. Format your response in Markdown.`;
     
     const userPrompt = `I have the following ingredients: ${ingredients}. I have about ${time} to cook. Please suggest 1-2 distinct meal ideas with brief instructions. If ingredients are scarce, suggest simple additions.`;
 
@@ -237,7 +238,7 @@ export const getLifeHack = async (category: string): Promise<string> => {
 };
 
 export const getRealtimeInspiration = async (query: string): Promise<InspirationalPerson | null> => {
-    const systemInstruction = `You are an expert historian and biographer specializing in women in STEM. Your goal is to provide detailed, inspiring profiles of women in science, technology, engineering, and mathematics based on a user's search query. You must return the data in a specific JSON format matching the InspirationalPerson schema.`;
+    const systemInstruction = `You are an expert historian and biographer specializing in pioneers in STEM. Your goal is to provide detailed, inspiring profiles of people in science, technology, engineering, and mathematics based on a user's search query. You must return the data in a specific JSON format matching the InspirationalPerson schema.`;
     
     const schema = {
         type: Type.OBJECT,
@@ -263,7 +264,7 @@ export const getRealtimeInspiration = async (query: string): Promise<Inspiration
         required: ['id', 'name', 'field', 'category', 'bio', 'quote', 'majorAchievements'],
     };
 
-    const userPrompt = `Find an inspiring woman in STEM matching this query: "${query}". Provide a detailed profile. 
+    const userPrompt = `Find an inspiring person in STEM matching this query: "${query}". Provide a detailed profile. 
     For 'category', choose one of: 'Historical Pioneers', 'Modern Innovators', 'Nobel Laureates', 'Rising Stars'.
     If the query is generic (e.g. "surprise me"), pick a random but significant figure.`;
 

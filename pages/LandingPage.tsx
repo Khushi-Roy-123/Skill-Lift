@@ -50,7 +50,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigateToAuth }) => {
                             Unlock Your Potential in SkillLift.
                         </h2>
                         <p className="text-xl md:text-2xl text-gray-200 [text-shadow:0_1px_3px_rgb(0_0_0_/_0.5)] max-w-3xl mx-auto mb-10 animate-pop-in" style={{ animationDelay: '0.2s' }}>
-                            Join a universe of opportunity. SkillLift provides the tools, community, and inspiration for women to thrive in Science, Technology, Engineering, and Math.
+                            Join a universe of opportunity. SkillLift provides the tools, community, and inspiration for aspiring professionals to thrive in Science, Technology, Engineering, and Math.
                         </p>
                         <button
                             onClick={onNavigateToAuth}
@@ -67,7 +67,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigateToAuth }) => {
                     <div className="max-w-5xl mx-auto text-center">
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why SkillLift?</h2>
                         <p className="text-lg text-gray-600 mb-12">
-                            We're more than a platform; we're a community dedicated to closing the gender gap in technology and science. We provide a supportive ecosystem for you to learn, grow, and succeed.
+                            We're more than a platform; we're a community dedicated to bridging the skills gap in technology and science. We provide a supportive ecosystem for you to learn, grow, and succeed.
                         </p>
                          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             <div className="text-center">
@@ -161,7 +161,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigateToAuth }) => {
                                 </div>
                                 <h1 className="text-xl font-bold text-blue-600">SkillLift</h1>
                             </div>
-                            <p className="text-sm text-gray-500">Empowering the next generation of women in Science, Technology, Engineering, and Math.</p>
+                            <p className="text-sm text-gray-500">Empowering the next generation of innovators in Science, Technology, Engineering, and Math.</p>
                         </div>
                         
                         <div className="grid grid-cols-2 md:grid-cols-3 md:col-span-3 gap-8">

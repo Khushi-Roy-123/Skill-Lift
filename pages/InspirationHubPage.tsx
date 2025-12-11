@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useMemo } from 'react';
 import { InspirationalPerson } from '../types';
 import { getInspirations } from '../services/dataService';
@@ -77,7 +78,7 @@ const InspirationHubPage: React.FC = () => {
         setSearchError(null);
         setSelectedPerson(null);
     
-        const result = await getRealtimeInspiration("a surprising and inspirational woman in any STEM field");
+        const result = await getRealtimeInspiration("a surprising and inspirational figure in any STEM field");
         if (result) {
             setSelectedPerson(result);
         } else {
@@ -93,7 +94,7 @@ const InspirationHubPage: React.FC = () => {
             <div className="text-center p-8 bg-gradient-to-br from-blue-50 to-sky-100 rounded-2xl border border-blue-200 shadow-lg">
                 <LightbulbIcon className="w-12 h-12 text-blue-500 mx-auto mb-4" />
                 <h1 className="text-3xl md:text-4xl font-bold text-gray-900">Inspiration Hub</h1>
-                <p className="text-gray-600 mt-2 max-w-3xl mx-auto">Discover the stories of pioneering women who changed the world with their work in STEM.</p>
+                <p className="text-gray-600 mt-2 max-w-3xl mx-auto">Discover the stories of pioneering figures who changed the world with their work in STEM.</p>
             </div>
 
             <div className="p-4 bg-sky-50/80 rounded-xl border border-gray-200 space-y-4 sticky top-20 md:top-4 z-10 backdrop-blur-sm">

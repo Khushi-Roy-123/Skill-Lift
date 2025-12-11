@@ -1,6 +1,7 @@
-# SkillLift - Empowering Women in STEM
 
-SkillLift is a comprehensive, AI-powered web application designed to empower, support, and inspire women in STEM (Science, Technology, Engineering, and Mathematics) fields. 
+# SkillLift - Empowering Professionals in STEM
+
+SkillLift is a comprehensive, AI-powered web application designed to empower, support, and inspire aspiring professionals in STEM (Science, Technology, Engineering, and Mathematics) fields. 
 
 Beyond just career growth, SkillLift recognizes the importance of holistic success. It combines professional mentorship, gamified learning, and community support with essential **life balance tools** to help users thrive personally and professionally.
 
@@ -13,7 +14,7 @@ Beyond just career growth, SkillLift recognizes the importance of holistic succe
 - **SkillQuest Gamification**: Turn your career path into an RPG. Choose a track (e.g., Software Developer, Data Scientist), complete quests, earn XP, level up, and unlock exclusive badges.
 - **Opportunities Hub**: A searchable, filterable database of scholarships, internships, grants, and conferences. Save your favorites and track deadlines.
 - **AI Resume Analyzer**: Paste your resume to get instant, AI-driven feedback with a score, strengths, and actionable improvements tailored for STEM roles.
-- **Inspiration Hub**: Explore profiles of pioneering women in history. Includes video features, biographies, and an AI-powered "Surprise Me" search.
+- **Inspiration Hub**: Explore profiles of pioneering figures in history. Includes video features, biographies, and an AI-powered "Surprise Me" search.
 
 ### 🧘‍♀️ Life Balance & Wellbeing
 - **Life Balance Hub**: A dashboard dedicated to personal productivity and health.
@@ -108,4 +109,4 @@ Follow these instructions to run the project locally using `npm`.
 ```
 
 ---
-*SkillLift is an open-source initiative to bridge the gender gap in tech.*
+*SkillLift is an open-source initiative to bridge the skills gap in tech.*

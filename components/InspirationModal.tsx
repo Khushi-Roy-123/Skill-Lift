@@ -70,7 +70,8 @@ const InspirationModal: React.FC<InspirationModalProps> = ({ person, onClose }) 
         Icon: React.FC<React.SVGProps<SVGSVGElement>>;
     }
 
-    const socialLinks = Object.entries(person.links || {}).map(([key, url]): SocialLink | null => {
+    const socialLinks = Object.entries(person.links || {}).map(([key, value]): SocialLink | null => {
+        const url = value as string;
         if (!url) return null;
         switch(key) {
             case 'wikipedia': return { name: 'Wikipedia', url, Icon: WikipediaIcon };
