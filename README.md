@@ -5,7 +5,6 @@ SkillLift is a comprehensive, AI-powered web application designed to empower, su
 
 Beyond just career growth, SkillLift recognizes the importance of holistic success. It combines professional mentorship, gamified learning, and community support with essential **life balance tools** to help users thrive personally and professionally.
 
-![SkillLift Application](https://storage.googleapis.com/aistudio-hosting/project-images/b48a042b-5e69-4a7b-8356-83606af95a8f.png)
 
 ## ✨ Features
 
